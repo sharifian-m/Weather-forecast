@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { WeatherComponent } from './home/weather/weather.component';
 
-const routes: Routes = [];
 
+export const routes: Routes = [
+  { path: 'weather', component: HomeComponent   },
+  { path: '', redirectTo: '/weather', pathMatch: 'full' }
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

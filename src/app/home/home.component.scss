@@ -1,0 +1,26 @@
+
+.wrapper{
+    width: 420px;
+    border-radius: 7px;
+    // background: #fff;
+    padding: 25px 28px 45px;
+    background-image: url("../../assets/weather-bg.jfif") ;
+    background-size: 420px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+  }
+  .wrapper header{
+    font-size: 28px;
+    font-weight: 500;
+   
+  }
+  .search input{
+    height: 53px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0 42px;
+    border: 1px solid #999;
+  }
+
+  

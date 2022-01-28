@@ -1,0 +1,38 @@
+
+  <div class="container">
+    <div class="row  p-3 d-flex justify-content-evenly align-items-center m-4 ">
+      <div class="col-lg-6 text-center">
+        <div class="container ">
+            <div class="wrapper">
+              <header class="text-center">
+                Weather Forecast
+              </header>
+              <form [formGroup]="forecastform" (ngSubmit)=forecast()>
+                <div class="container-fluid mt-2 p-2 d-flex flex-column justify-content-center align-items-center">
+                  <div class="search">
+                    <input type="text"
+                     class="form-control" placeholder="Please input a Location" formControlName="location"
+                      spellcheck="false">
+                      <!-- <span  class="error-block" *ngIf="!location.valid
+                      && location.touched">please enter your location</span> 
+                   <i class="fas fa-search"></i> -->
+                  </div>
+
+
+                  <div class="align-self-center">
+                    <button type="submit" 
+                     class="btn btn-primary mt-2" [disabled]="!forecastform.valid"> Search for the weather</button>
+                  </div>
+                </div>
+              </form>
+        
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-6 text-center">
+
+      <app-weather  *ngIf="formload" ></app-weather>
+  
+      </div>
+    </div>
+  </div>
