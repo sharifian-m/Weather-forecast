@@ -6,8 +6,7 @@ import { WeatherComponent } from './home/weather/weather.component';
 
 
 export const routes: Routes = [
-  { path: 'weather', component: HomeComponent   },
-  { path: '', redirectTo: '/weather', pathMatch: 'full' }
+  { path: 'location', component: WeatherComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -3,13 +3,13 @@
   <main class=" position-relative  d-flex flex-column ">
 
     <div class="title d-flex flex-column" ngSwitch="{{weatherData.weather[0].main}}">
-      <img *ngSwitchCase="'Clear'" class="img-fluid" src="../../assets/Clear.png" />
-      <img *ngSwitchCase="'Clouds'" class="img-fluid" src="../../assets/Clouds.png" />
-      <img *ngSwitchCase="'Smoke'" class="img-fluid" src="../../assets/Smoke.png" />
-      <img *ngSwitchCase="'Snow'" class="img-fluid" src="../../assets/Snow.png" />
-      <img *ngSwitchCase="'Drizzle'" class="img-fluid" src="../../assets/Drizzele.png" />
-      <img *ngSwitchCase="'Rain'" class="img-fluid" src="../../assets/Rain.png" />
-      <img *ngSwitchDefault class="img-fluid" src="../../assets/Clear.png" />
+      <img *ngSwitchCase="'Clear'" class="img-fluid" src="../../assets/Clear.png" alt="weather-icon" loading="lazy"  />
+      <img *ngSwitchCase="'Clouds'" class="img-fluid" src="../../assets/Clouds.png" alt="weather-icon" loading="lazy"  />
+      <img *ngSwitchCase="'Smoke'" class="img-fluid" src="../../assets/Smoke.png" alt="weather-icon" loading="lazy"  />
+      <img *ngSwitchCase="'Snow'" class="img-fluid" src="../../assets/Snow.png" alt="weather-icon" loading="lazy"  />
+      <img *ngSwitchCase="'Drizzle'" class="img-fluid" src="../../assets/Drizzele.png" alt="weather-icon" loading="lazy"  />
+      <img *ngSwitchCase="'Rain'" class="img-fluid" src="../../assets/Rain.png" alt="weather-icon" loading="lazy"  />
+      <img *ngSwitchDefault class="img-fluid" src="../../assets/notFound.png" alt="weather-icon" loading="lazy"  />
 
     </div>
     <div class="date align-self-start "> {{today | date:'medium' }}</div>

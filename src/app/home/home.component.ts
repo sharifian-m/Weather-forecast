@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   location: string = '';
   constructor(private fb: FormBuilder,
     private forecastService: ForecastService,
+    private route:Router
   ) { }
 
 
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit {
         console.log(this.weatherData);
         this.forecastService.setcoordinate(this.weatherData);
         this.formload = true;
+        this.route.navigate(['location']);
       });
 
     }
