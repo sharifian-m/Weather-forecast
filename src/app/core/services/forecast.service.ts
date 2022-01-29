@@ -25,7 +25,7 @@ export class ForecastService {
         temp_min: 0,
   }
   }
-    private  coordinate$ = new BehaviorSubject<any>(this.oneforecast);
+    private  coordinate$ = new BehaviorSubject<WeatherInfo>(this.oneforecast);
    currentcoordinate$ = this.coordinate$.asObservable();
 
     
@@ -38,7 +38,7 @@ export class ForecastService {
   }
 
 
-  setcoordinate (location:string){
-this.coordinate$.next(location);
+  setcoordinate (weatherinfo:WeatherInfo){
+this.coordinate$.next(weatherinfo);
   }
 }
