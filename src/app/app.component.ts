@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ForecastService } from './core/services/forecast.service';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -9,21 +7,8 @@ import { ForecastService } from './core/services/forecast.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  today: Date = new Date();
-  formload: boolean=false;
-  forecastform!: FormGroup;
-  weatherData: any;
-  location: any;
-  constructor(private fb: FormBuilder,
-    private forecastService: ForecastService,
-    private router: Router,
-    private route: ActivatedRoute
+  
+  constructor(
   ) {}
 
-
-  ngOnInit(): void {
-    this.forecastform = this.fb.group({
-      location: [""]
-    });
-  }
 }
